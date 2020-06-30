@@ -1,0 +1,147 @@
+@-webkit-keyframes move {
+  0% {
+    top: 0;
+    left: 0;
+  }
+  25% {
+    top: 0;
+    left: calc(100% - 200px);
+  }
+  50% {
+    top: calc(100% - 200px);
+    left: calc(100% - 200px);
+  }
+  75% {
+    top: calc(100% - 200px);
+    left: 0;
+  }
+  100% {
+    top: 0;
+    left: 0;
+  }
+}
+
+@keyframes move {
+  0% {
+    top: 0;
+    left: 0;
+  }
+  25% {
+    top: 0;
+    left: calc(100% - 200px);
+  }
+  50% {
+    top: calc(100% - 200px);
+    left: calc(100% - 200px);
+  }
+  75% {
+    top: calc(100% - 200px);
+    left: 0;
+  }
+  100% {
+    top: 0;
+    left: 0;
+  }
+}
+
+@-webkit-keyframes sounds {
+  0% {
+    visibility: hidden;
+  }
+  60% {
+    visibility: visible;
+  }
+  100% {
+    visibility: visible;
+  }
+}
+
+@keyframes sounds {
+  0% {
+    visibility: hidden;
+  }
+  60% {
+    visibility: visible;
+  }
+  100% {
+    visibility: visible;
+  }
+}
+
+p {
+  padding-top: 50%;
+  visibility: hidden;
+  -webkit-animation: sounds 2s step-end infinite;
+          animation: sounds 2s step-end infinite;
+}
+
+.box {
+  position: absolute;
+  text-align: center;
+  -webkit-animation: move 8s cubic-bezier(0.09, 0.71, 0.7, 1.02) infinite;
+          animation: move 8s cubic-bezier(0.09, 0.71, 0.7, 1.02) infinite;
+}
+
+.box--cat {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+.cat {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background: dodgerblue;
+  border-radius: 50%;
+}
+
+.cat:before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: 5px;
+  border: 20px solid transparent;
+  border-left: 35px solid dodgerblue;
+}
+
+.cat:after {
+  content: '';
+  position: absolute;
+  top: -5px;
+  right: 5px;
+  border: 20px solid transparent;
+  border-right: 35px solid dodgerblue;
+}
+
+.mouse {
+  position: relative;
+  top: 25px;
+  left: 25px;
+  width: 50px;
+  height: 50px;
+  background: goldenrod;
+  border-radius: 50%;
+}
+
+.mouse:before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 30px;
+  height: 30px;
+  background: goldenrod;
+  border-radius: 50%;
+}
+
+.mouse:after {
+  content: '';
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 30px;
+  height: 30px;
+  background: goldenrod;
+  border-radius: 50%;
+}
+/*# sourceMappingURL=style.css.map */
